@@ -1,0 +1,55 @@
+# ---------------------------
+# Entorno virtual y binarios
+# ---------------------------
+venv/
+env/
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+*.so
+
+# ---------------------------
+# Archivos de entorno / secretos
+# ---------------------------
+.env
+*.env
+
+# ---------------------------
+# Archivos de datos grandes
+# ---------------------------
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+*.csv
+*.xls
+*.xlsx
+*.zip
+*.tar.gz
+
+# ---------------------------
+# Archivos de Jupyter
+# ---------------------------
+.ipynb_checkpoints/
+
+# ---------------------------
+# VS Code
+# ---------------------------
+.vscode/
+
+# ---------------------------
+# Logs y cachés
+# ---------------------------
+*.log
+*.out
+.cache/
+pip-log.txt
+
+# ---------------------------
+# Repositorios y control
+# ---------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.git/
