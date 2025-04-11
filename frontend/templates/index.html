@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriSmart AI - Predicción ADG</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="/static/logo.png" alt="Logo NutriSmart" class="logo">
+            <h1>Predicción de Ganancia Diaria de Peso (ADG)</h1>
+            <p class="subtitle">Nutrición inteligente para sistemas ganaderos extensivos</p>
+        </header>
+
+        <main>
+            <form method="post" action="/predecir">
+                <div class="form-group">
+                    <label>Biomasa disponible (kg MS/ha)</label>
+                    <input type="number" step="0.01" name="biomasa_disponible" required>
+                </div>
+                <div class="form-group">
+                    <label>Duración del día (minutos)</label>
+                    <input type="number" name="duracion_dia_minutos" required>
+                </div>
+                <div class="form-group">
+                    <label>Velocidad promedio al pastar (m/min)</label>
+                    <input type="number" step="0.01" name="velocidad_promedio_pastoreo" required>
+                </div>
+                <div class="form-group">
+                    <label>Ángulo promedio de giro (grados)</label>
+                    <input type="number" step="0.01" name="angulo_promedio_giro" required>
+                </div>
+                <div class="form-group">
+                    <label>Duración media de sesión de pastoreo (min)</label>
+                    <input type="number" step="0.01" name="duracion_media_sesion_pastoreo" required>
+                </div>
+                <div class="form-group">
+                    <label>Pasos caminando (conteo)</label>
+                    <input type="number" name="pasos_caminando" required>
+                </div>
+                <div class="form-group">
+                    <label>Tiempo en descanso (conteo)</label>
+                    <input type="number" name="tiempo_descanso" required>
+                </div>
+                <button type="submit">Predecir ADG</button>
+            </form>
+
+            {% if prediccion %}
+            <div class="resultado">
+                <h2>Resultado de la predicción:</h2>
+                <p><strong>{{ prediccion }}</strong></p>
+            </div>
+            {% endif %}
+        </main>
+
+        <footer>
+            <p>&copy; 2025 NutriSmart AI - Predicciones Inteligentes para la Ganadería</p>
+        </footer>
+    </div>
+
+    <div class="imagen-ganado">
+        <img src="/static/ganado.jpg" alt="Ganado pastando">
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+### Prueba de predicción de ganancia diaria de peso (ADG)
+POST http://127.0.0.1:8000/predecir_adg/
+Content-Type: application/json
+
+{
+  "biomasa_disponible": 2400,
+  "duracion_dia_minutos": 1380,
+  "velocidad_promedio_pastoreo": 17.2,
+  "angulo_promedio_giro": 30.5,
+  "duracion_media_sesion_pastoreo": 14.4,
+  "pasos_caminando": 250,
+  "tiempo_descanso": 900
+}
