@@ -18,9 +18,9 @@ __pycache__/
 # ---------------------------
 # Archivos de datos grandes
 # ---------------------------
-*.h5
+# *.h5
 *.hdf5
-*.pkl
+# *.pkl
 *.joblib
 *.csv
 *.xls
